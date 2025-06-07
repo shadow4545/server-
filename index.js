@@ -9,7 +9,7 @@ const PORT = 5000;
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect('mongodb://localhost:27017/minipro')
+mongoose.connect('mongodb+srv://beak11:sPpLB75cxBJmoTdc@cluster0.ofkoxoy.mongodb.net/MINIPRO?retryWrites=true&w=majority&appName=Cluster0')
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.error('MongoDB connection error:', err));
 
