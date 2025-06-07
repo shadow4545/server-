@@ -5,6 +5,8 @@ import sinhvienRouter from './routes/sinhvien.js'; // nhớ thêm .js
 import cors from 'cors';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import dotenv from 'dotenv';
+dotenv.config();
 
 
 
@@ -24,7 +26,7 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 app.use('/api/sinhvien', sinhvienRouter);
 
 // mongo
-mongoose.connect('mongodb://localhost:27017/minipro')
+mongoose.connect(process.env.MONGOOSE_CONNECT_URI)
   .then(() => console.log('✅ Kết nối MongoDB thành công!'))
   .catch((err) => console.error('❌ Lỗi MongoDB:', err));
 
