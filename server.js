@@ -11,7 +11,7 @@ dotenv.config();
 
 
 const app = express();
-const port = 5000;
+const port = process.env.PORT || 5000 ;
 
 // 👇 vì __dirname không có sẵn trong ES Module
 const __filename = fileURLToPath(import.meta.url);
