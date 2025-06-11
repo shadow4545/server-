@@ -26,7 +26,7 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 app.use('/api/sinhvien', sinhvienRouter);
 
 // mongo
-mongoose.connect('mongodb+srv://beak11:sPpLB75cxBJmoTdc@cluster0.ofkoxoy.mongodb.net/MINIPRO?retryWrites=true&w=majority&appName=Cluster0')
+mongoose.connect('mongodb+srv://beak11:sPpLB75cxBJmoTdc@cluster0.ofkoxoy.mongodb.net/minipr?retryWrites=true&w=majority&appName=Cluster0')
   .then(() => console.log('✅ Kết nối MongoDB thành công!'))
   .catch((err) => console.error('❌ Lỗi MongoDB:', err));
 
